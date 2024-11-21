@@ -1,9 +1,9 @@
 import AuthWrapper from '../components/AuthWrapper';
 import Companies from '../components/Landing/Companies';
 import Everything from '../components/Landing/Everything';
-import FiverrBusiness from '../components/Landing/FiverrBusiness';
+import FiverBusiness from '../components/Landing/FiverBusiness';
 import HeroBanner from '../components/Landing/HeroBanner';
-import JoinFiverr from '../components/Landing/JoinFiverr';
+import JoinFiver from '../components/Landing/JoinFiver';
 import PopularServices from '../components/Landing/PopularServices';
 import Services from '../components/Landing/Services';
 import { useStateProvider } from '../context/StateContext';
@@ -19,8 +19,8 @@ function Index() {
             <PopularServices />
             <Everything />
             <Services />
-            <FiverrBusiness />
-            <JoinFiverr />
+            <FiverBusiness />
+            <JoinFiver />
             {(showLoginModal || showSignupModal) && (
                 <AuthWrapper type={showLoginModal ? 'login' : 'signup'} />
             )}
