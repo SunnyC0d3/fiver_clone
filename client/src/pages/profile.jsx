@@ -102,10 +102,9 @@ function Profile() {
         }
     };
 
-    const inputClassName =
-        "block p-4 w-full text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50  focus:ring-blue-500 focus:border-blue-500";
-    const labelClassName =
-        "mb-2 text-lg font-medium text-gray-900  dark:text-white";
+    const inputClassName = 'block p-4 w-full text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50  focus:ring-blue-500 focus:border-blue-500';
+    const labelClassName = 'inline-block mb-2 text-lg font-medium text-gray-900';
+
     return (
         <>
             {isLoaded && (
@@ -172,12 +171,12 @@ function Profile() {
                             </div>
                         </div>
                         <div className="flex gap-4 w-[500px]">
-                            <div>
+                            <div className="w-full">
                                 <label className={labelClassName} htmlFor="userName">
                                     Please select a username
                                 </label>
                                 <input
-                                    className={inputClassName}
+                                    className={`${inputClassName} w-full`} // Ensures the input takes full width
                                     type="text"
                                     name="userName"
                                     id="userName"
@@ -187,12 +186,12 @@ function Profile() {
                                 />
                             </div>
 
-                            <div>
+                            <div className="w-full">
                                 <label className={labelClassName} htmlFor="fullName">
                                     Please enter your full Name
                                 </label>
                                 <input
-                                    className={inputClassName}
+                                    className={`${inputClassName} w-full`} // Ensures the input takes full width
                                     type="text"
                                     name="fullName"
                                     id="fullName"

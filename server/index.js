@@ -8,7 +8,7 @@ import { orderRoutes } from './routes/OrderRoutes.js';
 import { messageRoutes } from './routes/MessageRoutes.js';
 import { dashboardRoutes } from './routes/DashboardRoutes.js';
 
-dotenv.config();
+dotenv.config({ path: '.env.local', override: true });
 
 const app = express();
 const port = process.env.PORT;

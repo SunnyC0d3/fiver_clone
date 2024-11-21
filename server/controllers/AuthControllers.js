@@ -1,7 +1,9 @@
-import { Prisma, PrismaClient } from '@prisma/client';
+import pkg from '@prisma/client';
 import { genSalt, hash, compare } from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import { renameSync } from 'fs';
+
+const { Prisma, PrismaClient } = pkg;
 
 const generatePassword = async (password) => {
   const salt = await genSalt();
